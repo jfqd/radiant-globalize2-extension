@@ -163,7 +163,7 @@ module Globalize2
       # The previously current locale is reset after the block is finished.
       def switch_locale(locale)
         current_locale = I18n.locale
-        I18n.locale = locale
+        I18n.locale = locale.to_sym
         result = yield
         I18n.locale = current_locale
         result

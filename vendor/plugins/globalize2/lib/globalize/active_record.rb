@@ -171,7 +171,7 @@ module Globalize
       end
 
       def attribute_names
-        translated_attribute_names.map(&:to_s) + super
+        translated_attribute_names.map(&:to_s) + super rescue super
       end
 
       def available_locales
